@@ -1,0 +1,149 @@
+/* TI CKETタイトル用 */
+.ticket-title {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 48px 0 24px 0;
+	letter-spacing: 0.2em;
+	color: #222;
+}
+.divider-text {
+    margin: 24px 32px;
+    text-align: center;
+}
+.divider-text p {
+    margin: 8px 0;
+    font-size: 1rem;
+	color: #B880FF;
+}
+main section p {
+	margin-left: 32px;
+	margin-right: 32px;
+	font-size: 0.85rem;
+	white-space: pre-line;
+	text-align: left; 
+}
+/* パート目次用の灰色長方形 */
+.section-title {
+	background: #ccc;
+	color: #222;
+	padding: 8px 12px;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 0;
+	margin: 32px 32px 16px 32px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 80px;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: #B880FF;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ヘッダーロゴ用 */
+.header-logo {
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 80px;
+	width: auto;
+	font-size: 2rem;
+	z-index: 1000;
+}
+
+footer {
+	height: 50px;
+	background: #B880FF;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+}
+
+.entry-form {
+  margin: 24px 32px 40px;
+  max-width: 300px;
+}
+
+.entry-form label,
+.entry-form fieldset,
+.entry-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.entry-form input[type="text"] {
+  margin-top: 4px;
+  padding: 8px 10px;   /* 10x12 → 8x10 */
+  font-size: 0.9rem;
+}
+
+.entry-form fieldset {
+  padding: 8px;
+}
+
+.entry-form fieldset label {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.entry-form button {
+  padding: 9px 10px;   /* 12px → 小さめ */
+  font-size: 0.9rem;
+}
+
+.thanks-wrap {
+  margin: 140px auto 40px;
+  width: calc(100% - 64px);
+  max-width: 520px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 24px;
+  text-align: center;
+}
+
+.thanks-title {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.thanks-text {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.thanks-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 18px;
+  background: #B880FF;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.thanks-page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.thanks-page main {
+	flex: 1;
+}
