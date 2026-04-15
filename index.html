@@ -110,21 +110,24 @@
 	</footer>
 
 	<script>
-		const entryForm = document.getElementById('entryForm');
+		document.getElementById('entryForm').addEventListener('submit', async (e) => {
+		  e.preventDefault();
 
-		entryForm.addEventListener('submit', async (event) => {
-			event.preventDefault();
-			const formData = new FormData(entryForm);
+		  const form = e.target;
+		  const data = new FormData(form);
 
-			try {
-				await fetch(entryForm.action, {
-					method: 'POST',
-					body: formData,
-					mode: 'no-cors'
-				});
-			} finally {
-				window.location.href = 'thanks.html';
-			}
+		  try {
+		    const res = await fetch(form.action, {
+		      method: 'POST',
+		      body: data,
+		      mode: 'no-cors' // GASはこれが必要なことが多い
+		    });
+
+		    // no-corsだとres.ok等が正確に取れないことがあるので「送れた前提」で遷移
+		    location.href = 'thanks.html';
+		  } catch (err) {
+		    alert('送信に失敗しました。通信状況を確認してもう一度試してね。');
+		  }
 		});
 	</script>
 </body>
