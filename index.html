@@ -84,7 +84,7 @@
 			</p>
 		</section>
 
-		<form class="entry-form" action="https://script.google.com/macros/s/AKfycbxwxn-MUQymPQZ2l_fCORqVXzJZPFx0Vpl8Zpibg8XzhEz6BP_3QDpoM9pe7FxboJA/exec" method="post">
+		<form id="entryForm" class="entry-form" action="https://script.google.com/macros/s/AKfycbxwxn-MUQymPQZ2l_fCORqVXzJZPFx0Vpl8Zpibg8XzhEz6BP_3QDpoM9pe7FxboJA/exec" method="post">
   <label>申込者氏名
     <input type="text" name="applicant_name" required>
   </label>
@@ -108,3 +108,24 @@
 	<footer>
 		<p>Lyla2026</p>
 	</footer>
+
+	<script>
+		const entryForm = document.getElementById('entryForm');
+
+		entryForm.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			const formData = new FormData(entryForm);
+
+			try {
+				await fetch(entryForm.action, {
+					method: 'POST',
+					body: formData,
+					mode: 'no-cors'
+				});
+			} finally {
+				window.location.href = 'thanks.html';
+			}
+		});
+	</script>
+</body>
+</html>
