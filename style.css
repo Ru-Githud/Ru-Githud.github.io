@@ -74,8 +74,9 @@ footer {
 }
 
 .entry-form {
-  margin: 24px 32px 40px;
-  max-width: 300px;
+	margin: 24px 32px 40px;
+	width: calc(100% - 64px);
+	max-width: 420px;
 }
 
 .entry-form label,
@@ -89,7 +90,11 @@ footer {
 .entry-form input[type="text"] {
   margin-top: 4px;
   padding: 8px 10px;   /* 10x12 → 8x10 */
-  font-size: 0.9rem;
+	font-size: 16px;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #eee;
+	border: 1px solid #bbb;
 }
 
 .entry-form fieldset {
@@ -104,7 +109,40 @@ footer {
 
 .entry-form button {
   padding: 9px 10px;   /* 12px → 小さめ */
-  font-size: 0.9rem;
+	font-size: 16px;
+}
+
+@media (max-width: 600px) {
+	body {
+		font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Yu Gothic UI", "Meiryo", sans-serif;
+	}
+
+	body,
+	input,
+	button,
+	select,
+	textarea,
+	fieldset,
+	legend {
+		font-family: inherit;
+	}
+
+	.entry-form,
+	.divider-text,
+	.section-title,
+	main section p {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+
+	.section-title {
+		margin-top: 24px;
+	}
+
+	.entry-form {
+		width: calc(100% - 32px);
+		max-width: none;
+	}
 }
 
 .thanks-wrap {
